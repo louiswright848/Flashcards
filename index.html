@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MATH3567 Flashcards</title>
+<style>
+body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px; }
+.card { background: white; border-radius: 10px; padding: 20px; margin: 15px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.15); cursor: pointer; transition: 0.3s; }
+.card:hover { transform: scale(1.02); }
+.back { display: none; margin-top: 10px; color: #444; }
+h2 { margin-top: 40px; }
+</style>
+<script>
+function flip(id) {
+    const back = document.getElementById(id);
+    back.style.display = back.style.display === "none" ? "block" : "none";
+}
+</script>
+</head>
+<body>
+
+<h1>MATH3567 Flashcards</h1>
+<p>Click any card to flip it.</p>
+
+<h2>Discrete Maps</h2>
+
+<div class="card" onclick="flip('c1')">
+<b>Fixed points of Xₙ₊₁ = rXₙ / (1 + Xₙ²)</b>
+<div class="back" id="c1">
+X = 0<br>
+X = √(r − 1) for r > 1<br>
+<img src="scalar_map_fixed_points.png" width="250">
+</div>
+</div>
+
+<div class="card" onclick="flip('c2')">
+<b>Derivative of the map</b>
+<div class="back" id="c2">
+f'(x) = r(1 − x²) / (1 + x²)²<br>
+Stability: |f'(X*)| < 1
+</div>
+</div>
+
+<h2>Predator–Prey</h2>
+
+<div class="card" onclick="flip('c3')">
+<b>Nullclines of predator–prey system</b>
+<div class="back" id="c3">
+x-nullclines: x = 0, y = (1 − x)/(1 + λ)<br>
+y-nullclines: y = 0, x = 1/λ<br>
+<img src="predator_prey_nullclines.png" width="250">
+</div>
+</div>
+
+<div class="card" onclick="flip('c4')">
+<b>Equilibria of predator–prey</b>
+<div class="back" id="c4">
+(0,0), (1,0), (1/λ, (1 − 1/λ)/(1 + λ))
+</div>
+</div>
+
+<h2>Hardy–Weinberg</h2>
+
+<div class="card" onclick="flip('c5')">
+<b>Genotype frequencies</b>
+<div class="back" id="c5">
+AA = p², AB = 2pq, BB = q²<br>
+<img src="hardy_weinberg_triangle.png" width="250">
+</div>
+</div>
+
+<div class="card" onclick="flip('c6')">
+<b>Fraction with at least one A allele</b>
+<div class="back" id="c6">
+1 − q²
+</div>
+</div>
+
+<h2>Evolutionary Game Theory</h2>
+
+<div class="card" onclick="flip('c7')">
+<b>Replicator equation</b>
+<div class="back" id="c7">
+ẋ = x(u_C − ū), where ū = xu_C + (1−x)u_D<br>
+<img src="replicator_phase_diagram.png" width="250">
+</div>
+</div>
+
+<div class="card" onclick="flip('c8')">
+<b>ESS condition</b>
+<div class="back" id="c8">
+u(s,s) > u(t,s) for all t ≠ s
+</div>
+</div>
+
+<h2>Markov Chains</h2>
+
+<div class="card" onclick="flip('c9')">
+<b>Stationary distribution</b>
+<div class="back" id="c9">
+Solve π = Pπ, Σπᵢ = 1<br>
+<img src="markov_chain_stationary_distribution.png" width="250">
+</div>
+</div>
+
+<h2>Moran Process</h2>
+
+<div class="card" onclick="flip('c10')">
+<b>Fixation probability</b>
+<div class="back" id="c10">
+ρ_C = (1 − r⁻ⁱ) / (1 − r⁻ᴺ)<br>
+<img src="moran_fixation_curve.png" width="250">
+</div>
+</div>
+
+<h2>Wright–Fisher</h2>
+
+<div class="card" onclick="flip('c11')">
+<b>Transition probability</b>
+<div class="back" id="c11">
+P_{ji} = C(N,j)(i/N)^j (1 − i/N)^(N−j)<br>
+<img src="wright_fisher_transition_distribution.png" width="250">
+</div>
+</div>
+
+<h2>Fokker–Planck</h2>
+
+<div class="card" onclick="flip('c12')">
+<b>Fokker–Planck equation</b>
+<div class="back" id="c12">
+∂p/∂t = −∂[v(1−2x)p]/∂x + D ∂²[x(1−x)p]/∂x²<br>
+<img src="fokker_planck_drift_diffusion.png" width="250">
+</div>
+</div>
+
+</body>
+</html>
